@@ -1,10 +1,8 @@
 <?php
-    $nota1 = 0;
-    $nota2 = 1;
+    $nota1 = (float) readline("Digite a nota 1:");
+    $nota2 = (float) readline("Digite a nota 2:");
     $media = ($nota1 + $nota2) / 2;
-    $totaldeaulas = 20;
-    $aulasfaltas = 19;
-    $frequencia = ($totaldeaulas - $aulasfaltas) / $totaldeaulas * 100;
+    $frequencia = (float) readline("Digite a frequência (em %):");
     $nome = "Enzo Enrico";
 
     if (($media >= 7 and $frequencia >= 75) or $nome == "Enzo Enrico") {
