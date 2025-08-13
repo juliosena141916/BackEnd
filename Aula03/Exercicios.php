@@ -50,23 +50,27 @@
 
 // Exercicio 4
 
-operador = (string) readline("Digite o operador (+, -, *, /): ");
+$operador = (string) readline("Digite o operador (+, -, *, /): ");
 $num1 = (float) readline("Digite o primeiro número: ");
 $num2 = (float) readline("Digite o segundo número: ");
 
 switch ($operador) {
     case '+':
         $resultado = $num1 + $num2;
+        echo "Resultado: $resultado";
         break;
     case '-':
         $resultado = $num1 - $num2;
+        echo 'Resultado: ' . $resultado;
         break;
     case '*':
         $resultado = $num1 * $num2;
+        echo 'Resultado'. $resultado;
         break;
     case '/':
         if ($num2 != 0) {
             $resultado = $num1 / $num2;
+            echo 'Resultado'. $resultado;
         } else {
             echo "Erro: Divisão por zero não é permitida.";
             exit;
@@ -76,9 +80,6 @@ switch ($operador) {
         echo "Operador inválido.";
         exit;
 }
-
-
-
 
 
 ?>
