@@ -44,7 +44,7 @@ switch ($num) {
         echo "Sábado";
         break;
     default:
-        echo "Número fora do intervalo de 1 a 3.";
+        echo "Número fora do intervalo de 1 a 7.";
         break;
 };
 
