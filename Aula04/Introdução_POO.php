@@ -40,10 +40,12 @@
     // $Ndonos_carro1 = novoDono($Ndonos_carro1);
 
     function exibirCarros($modelo, $marca, $ano, $revisao, $donos){
-        $informacoes = "O Carro $modelo, ano $ano, já passou por revisão: $revisao, número de donos: $donos";
+        $informacoes = "O Carro $marca $modelo, ano $ano, já passou por revisão: $revisao, número de donos: $donos";
     }
 
     $dados_carro1 = exibirCarros($modelo_carro1, $marca_carro1, $ano_carro1, $revisao_carro1, $Ndonos_carro1);
     echo $dados_carro1;
 
+    $samambaia = 0;
+    
 ?>

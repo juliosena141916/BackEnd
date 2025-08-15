@@ -48,38 +48,33 @@
 //         break;
 // };
 
-// Exercicio 4
+// EXERCICIO 4
+// $num1 = (float) readline("Digite o primeiro número: ");
+// $num2 = (float) readline("Digite o segundo número: ");
+//  $operacao = (string) readline("Escolha a operação: ");
 
-$operador = (string) readline("Digite o operador (+, -, *, /): ");
-$num1 = (float) readline("Digite o primeiro número: ");
-$num2 = (float) readline("Digite o segundo número: ");
+//  switch ($operacao) {
+//      case 1:
+//          if ($operacao == "+") {
+//              echo "Resultado: ", $num1 + $num2;
+//          } elseif ($operacao == "-") {
+//              echo "Resultado: ", $num1 - $num2;
+//          } elseif ($operacao == "*") {
+//              echo "Resultado: ", $num1 * $num2;
+//          } elseif ($operacao == "/") {
+//              if ($num2 != 0) {
+//                  echo "Resultado: ", $num1 / $num2;
+//              } else {
+//                  echo "Divisão por zero não é permitida.";
+//              }
+//          } else {
+//              echo "Operação inválida.";
+//          };
 
-switch ($operador) {
-    case '+':
-        $resultado = $num1 + $num2;
-        echo "Resultado: $resultado";
-        break;
-    case '-':
-        $resultado = $num1 - $num2;
-        echo 'Resultado: ' . $resultado;
-        break;
-    case '*':
-        $resultado = $num1 * $num2;
-        echo 'Resultado'. $resultado;
-        break;
-    case '/':
-        if ($num2 != 0) {
-            $resultado = $num1 / $num2;
-            echo 'Resultado'. $resultado;
-        } else {
-            echo "Erro: Divisão por zero não é permitida.";
-            exit;
-        }
-        break;
-    default:
-        echo "Operador inválido.";
-        exit;
-}
+
+
+
+
 
 
 ?>
