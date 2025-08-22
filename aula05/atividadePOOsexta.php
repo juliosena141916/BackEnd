@@ -38,7 +38,7 @@
 // $carro4 -> exibirInfo();
 
 
-class cachorro{
+class Cachorro{
     public $nome;
     public $raca;
     public $sexo;
@@ -52,10 +52,20 @@ class cachorro{
     }
 
     public function latir(){
-        echo "O cachorro $nome está latindo";
+        echo "O cachorro $this->nome está latindo";
     }
+
+    public function Urinar(){
+        echo "O cachorro $this->nome está marcando território";
+    }
+
+
+
 }
 
-$cachorro1 = new cachorro(Roberto, bulldog, M, 5);
+$Cachorro1 = new Cachorro("Roberto", "bulldog", "M", 5);
+$Cachorro2 = new Cachorro("Marcio", "shitzu", "M", 2);
 
-$cachorro1 -> latir();
+$Cachorro1 -> latir();
+$Cachorro2 -> Urinar();
+

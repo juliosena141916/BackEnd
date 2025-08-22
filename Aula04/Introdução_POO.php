@@ -102,7 +102,7 @@
     echo $revisar4;
 
 
-    function calcularValor()
+ 
 
 
 
