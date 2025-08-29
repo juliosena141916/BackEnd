@@ -38,34 +38,57 @@
 // $carro4 -> exibirInfo();
 
 
-class Cachorro{
+// class Cachorro{
+//     public $nome;
+//     public $raca;
+//     public $sexo;
+//     public $idade;
+
+//     public function __construct($nome, $raca, $sexo, $idade){
+//         $this -> nome = $nome;
+//         $this -> raca = $raca;
+//         $this -> sexo = $sexo;
+//         $this -> idade = $idade;
+//     }
+
+//     public function latir(){
+//         echo "O cachorro $this->nome está latindo";
+//     }
+
+//     public function Urinar(){
+//         echo "O cachorro $this->nome está marcando território";
+//     }
+
+// }
+
+// $Cachorro1 = new Cachorro("Roberto", "bulldog", "M", 5);
+// $Cachorro2 = new Cachorro("Marcio", "shitzu", "M", 2);
+
+// $Cachorro1 -> latir();
+// $Cachorro2 -> Urinar();
+
+
+class Usuarios{
     public $nome;
-    public $raca;
+    public $cpf;
     public $sexo;
-    public $idade;
+    public $email;
+    public $estado_civil;
+    public $cidade;
+    public $estado;
+    public $endereco;
+    public $cep;
 
-    public function __construct($nome, $raca, $sexo, $idade){
+    public function __construct($nome, $cpf, $sexo, $email, $estado_civil, $cidade, $estado, $endereco, $cep){
         $this -> nome = $nome;
-        $this -> raca = $raca;
+        $this -> cpf = $cpf;
         $this -> sexo = $sexo;
-        $this -> idade = $idade;
+        $this -> email = $email;
+        $this -> estado_civil = $estado_civil;
+        $this -> cidade = $cidade;
+        $this -> estado = $estado;
+        $this -> endereco = $endereco;
+        $this -> cep = $cep;
     }
-
-    public function latir(){
-        echo "O cachorro $this->nome está latindo";
-    }
-
-    public function Urinar(){
-        echo "O cachorro $this->nome está marcando território";
-    }
-
-
 
 }
-
-$Cachorro1 = new Cachorro("Roberto", "bulldog", "M", 5);
-$Cachorro2 = new Cachorro("Marcio", "shitzu", "M", 2);
-
-$Cachorro1 -> latir();
-$Cachorro2 -> Urinar();
-
