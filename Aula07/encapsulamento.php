@@ -66,7 +66,11 @@ class Pessoas{
     public function getEmail(){
         return $this->email;
     }
+
+    public function info(){
+        return "O nome é $this->nome, tem $this->idade e o email é $this->email";
+    }
 }
 
-$pessoa1 = new Pessoas();
-echo $pessoa1->getNome();
+$pessoa1 = new Pessoas("poiu", 5, "uiop@gmail.com");
+echo $pessoa1->info();
