@@ -50,7 +50,7 @@ class Imovel{
         private $tamanho;
 
         public function __construct($categoria, $n_comodos, $valor, $estado_conservacao, $tamanho){
-            parent::__construct($categoria, n_comodos, $valor, $estado_conservacao);
+            parent::__construct($categoria, $n_comodos, $valor, $estado_conservacao);
 
             $this->tamanho=$tamanho;
         }

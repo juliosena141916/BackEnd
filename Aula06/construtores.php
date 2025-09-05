@@ -1,5 +1,30 @@
-<!-- public -> São atributos publicos que podem ser acessados de fora de uma classe.-->
-<!-- private -> São atributos privados que acessados somente por dentro da classe. -->
-<!-- getter -> Método padrão para ler ou obter valores de um atributo privado. -->
-<!-- setter -> Método padrão para alterar ou modificar valores de um atributo privado -->
+<?php
+class Produtos{
+    public $nome;
+    public $categoria;
+    public $fornecedor;
+    public $qtde_estoque;
+
+    public function produto_vendido(){
+        
+    }
+
+}
+
+// $bolacha1 = new Produtos("Nikito", "Doces", "Vitarella", 220);
+
+$bolacha1 = new Produtos();
+$bolacha1 -> nome = "Nikito";
+$bolacha1 -> categoria = "Doces";
+$bolacha1 -> fornecedor = "Vitarella";
+$bolacha1 -> qtde_estoque = 220;
+
+
+// $feijao = new Produtos("Oliron", "Mantimentos", "Reserva nobre", 123);
+
+$bolacha1 = new Produtos();
+$bolacha1 -> nome = "Nikito";
+$bolacha1 -> categoria = "Doces";
+$bolacha1 -> fornecedor = "Vitarella";
+$bolacha1 -> qtde_estoque = 220;
 
