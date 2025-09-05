@@ -47,7 +47,13 @@ class Quadrado implements Forma{
 
 class Circulo implements Forma{
     public function CalcularArea($lado, $raio){
-        $calculoc = $raio * 3.14;
-        echo "Pagamento realizado com PIX valor: $calculoc\n";
+        $calculoc = pi()*($raio*$raio);
+        echo "A area do cir: $calculoc\n";
     }
 }
+
+$quadrado = new Quadrado();
+$quadrado->CalcularArea(5,5);
+
+$circulo = new Circulo();
+$circulo->CalcularArea(5,5);
