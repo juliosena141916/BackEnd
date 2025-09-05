@@ -68,7 +68,7 @@ class Pessoas{
     }
 
     public function info(){
-        return "O nome é $this->nome, tem $this->idade e o email é $this->email";
+        return "O nome é $this->nome, tem $this->idade anos e o email é $this->email";
     }
 }
 
