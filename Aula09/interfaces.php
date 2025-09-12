@@ -61,6 +61,14 @@ class Pentagono implements Forma{
     }
 }
 
+class Hexagono implements Forma{
+
+    public function CalcularArea($lado, $raio){
+        $calculoh = (($lado*$lado) * (3 * sqrt(3))) / 2;
+        echo "\nA area do hexagono é :" . number_format($calculoh,2);
+    }
+}
+
 $quadrado = new Quadrado();
 $quadrado->CalcularArea(5,5);
 
@@ -69,3 +77,6 @@ $circulo->CalcularArea(5,5);
 
 $pentagono = new Pentagono();
 $pentagono->CalcularArea(5,5);
+
+$hexagono = new Hexagono();
+$hexagono->CalcularArea(5,5);
