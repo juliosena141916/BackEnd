@@ -52,8 +52,27 @@ class Circulo implements Forma{
     }
 }
 
+class Pentagono implements Forma{
+
+    public function CalcularArea($lado, $raio){
+        $apotema = readline("Insira o valor do Apótema:");
+        $calculop = ((($lado * 5) * $apotema) / 2);
+    }
+}
+
+
+
+
+
+
+
+
+
 $quadrado = new Quadrado();
 $quadrado->CalcularArea(5,5);
 
 $circulo = new Circulo();
 $circulo->CalcularArea(5,5);
+
+$pentagono = new Pentagono();
+$pentagono ->CalcularArea(5,5);
