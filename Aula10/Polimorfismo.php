@@ -1,5 +1,5 @@
 <?php
-
+namespace Aula10;
 interface interface_mover{
 
     public function mover();
@@ -80,3 +80,18 @@ $email->notificar();
 $sms = new sms;
 $sms->enviar();
 $sms->notificar();
+
+interface soma{
+    public function somar();
+}
+
+    class calculadora implements soma{
+        public function somar(){
+            a1 == readline("Número 1: ");
+            a2 == readline("Número 2: ");
+            conta == a1 + a2;
+        }
+    }
+
+$calculadora = new calculadora();
+$calculadora -> somar();
