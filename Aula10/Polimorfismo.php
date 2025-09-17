@@ -87,9 +87,10 @@ interface soma{
 
     class calculadora implements soma{
         public function somar(){
-            a1 == readline("Número 1: ");
-            a2 == readline("Número 2: ");
-            conta == a1 + a2;
+            $a1 = readline("Número 1: ");
+            $a2 = readline("Número 2: ");
+            $conta = $a1 + $a2;
+            echo "A soma de $a1 e $a2 é $conta";
         }
     }
 
