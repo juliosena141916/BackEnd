@@ -8,7 +8,7 @@ class eletrodomestico {
 	private $preco;
 
 	
-public function __construct($voltagem, $descricao, $potencia, $nome, $preco){
+public function _construction($voltagem, $descricao, $potencia, $nome, $preco){
        $this->setVoltagem($voltagem);
        $this->setDescricao($descricao);
        $this->setPotencia($potencia);
@@ -21,7 +21,7 @@ public function setVoltagem($volts) {
 }
 
 public function setDescricao($valor){
-	$this->descricao = ucwords(strtolower($valor));
+	$this->descricao = ucwords(strtoLower($valor));
 }
 
 public function setNome($nomeRecebido){
@@ -33,7 +33,7 @@ public function setPreco($Npreco){
 }
 
 public function setPotencia($Npotencia){
-	$this->potencia = preg_replace('/\D/', '', $Npotencia);
+	$this->potencia = preg_replace('/|D/', '', $Npotencia);
 }
 
 
