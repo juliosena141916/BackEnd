@@ -70,7 +70,7 @@ public static function criarViaTerminal() {
     }
 
 public function exibirInfo() {
-        return "infromacões do eletrodoméstico:\n Nome: $this->nome\n Preço: $this->preco \n Descrição: $this->descricao \n Voltagem: $this->voltagem\n Potência: $this->potencia\n";  
+        return "infromacões do eletrodoméstico:\n Nome: $this->nome\n Descrição: $this->descricao \n Preço: $this->preco \n Voltagem: $this->voltagem\n Potência: $this->potencia\n";  
     }
 }
 
