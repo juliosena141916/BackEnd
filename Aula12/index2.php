@@ -1,9 +1,14 @@
 <?php
-
+namespace Aula12;
 class herois{
-    public $treinar;
-    public $ir;
-    public $doar;
+    public $nome;
+    public $idade;
+
+    public function __construct($nome, $idade){
+        $this->nome=$nome;
+        $this->idade=$idade;
+    }
+
 }
 
 // classe herois se relaciona com lugares
@@ -12,10 +17,21 @@ class herois{
 
 
 class lugares{
-    public $cotil;
-    public $shopping;
+    public $nome;
+    public $endereço;
+
+    public function __construct($nome, $endereço){
+        $this->nome=$nome;
+        $this->endereço=$endereço;
+    }
 }
 
 class brinquedos{
-    
+    public $nome;
+    public $preço;
+
+    public function __construct($nome, $preço){
+        $this->nome=$nome;
+        $this->preço=$preço;
+    }
 }

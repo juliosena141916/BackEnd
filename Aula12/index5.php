@@ -1,11 +1,23 @@
 <?
 
 class usuarios{
-    public $alunos;
-    public $professores;
+    public $nome;
+    public $idade;
+
+    public function __construct($nome, $idade){
+        $this->nome=$nome;
+        $this->idade=$idade;
+    }
+
+    public function emprestar(){
+        return "Emprestou um livro";
+    }
 }
 
-class emprestimos{
-    public $livros;
-    public $revistas;
+class livros{
+    public $nome;
+
+    public function __construct($nome){
+        $this->nome=$nome;
+    }
 }

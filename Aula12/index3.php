@@ -1,10 +1,9 @@
 <?
 class personagens{
-    public $amar;
-    public $superar;
-    public $comer;
-}
-
-class jornada{
-    public $comeca;
+    public $nome;
+    public $idade;
+    public function __construct($nome, $idade){
+        $this->nome=$nome;
+        $this->idade=$idade;
+    }
 }

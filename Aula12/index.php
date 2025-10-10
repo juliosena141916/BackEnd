@@ -7,10 +7,18 @@ Terra, eles poderão comer comidas típicas e nadar em rios ou praias. -->
 
 <?php
 
-class Turista{
-    public $visitar;
-    public $comer;
-    public $nadar;
+class Turistas{
+    public function visitar(){
+        return "eles visitam";
+    }
+
+    public function comer(){
+        return "eles comem";
+    }
+
+    public function nadar(){
+        return "eles nadam";
+    }
 }
 
 // classe turista se relaciona com paises
@@ -22,10 +30,12 @@ class Turista{
 //clase turista se relaciona com Alimentos
 //turistas comem comidas
 
-class Paises{
-    public $japão;
-    public $brasil;
-    public $acre;
+class Lugares{
+    public $nome;
+
+    public function __construct($nome){
+        $this->nome=$nome;
+    }
 }
 
 //classe paises se relaciona com Aguas
@@ -35,15 +45,19 @@ class Paises{
 //paises tem comida
 
 class Aguas{
-    public $rios;
-    public $praias;
+    public $nome;
+
+    public function __construct($nome){
+        $this->nome=$nome;
+    }
 }
 
 class Alimento{
-    public $comida;
+    public $nome;
+
+    public function __construct($nome){
+        $this->nome=$nome;
+    }
 }
-
-
-
 
 ?> -->
