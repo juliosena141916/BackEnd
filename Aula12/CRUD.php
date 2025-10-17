@@ -6,9 +6,9 @@ class Aluno{
     private $curso;
 
     public function __construct($id,$nome,$curso){
-        $this->id=setId($id);
-        $this->nome=setNome($nome);
-        $this->curso=setCurso($curso);
+        $this->id=$id;
+        $this->nome=$nome;
+        $this->curso=$curso;
     }
 
     public function setId($id){
@@ -21,5 +21,18 @@ class Aluno{
 
     public function setCurso($curso){
         $this->curso=$curso;
+    }
+
+
+    public function getId(){
+        return $this->id;
+    }
+
+    public function getNome(){
+        return $this->nome;
+    }
+
+    public function getCurso(){
+        return $this->curso;
     }
 }

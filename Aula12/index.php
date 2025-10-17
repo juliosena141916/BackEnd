@@ -1,63 +1,54 @@
-<!-- <!-- Cenário 1 – Viagem pelo Mundo
-Um grupo de turistas vai visitar o Japão, o Brasil e o Acre. Em cada lugar da
-Terra, eles poderão comer comidas típicas e nadar em rios ou praias. -->
-
-<!--Classes: turistas, japão, brasil, acre, comidas, rios, praias
-<!--metodos: visitar,comer, nadar
-
 <?php
 
-class Turistas{
-    public function visitar(){
-        return "eles visitam";
-    }
+require_once "CRUD.php";
+require_once "AlunoDAO.php";
 
-    public function comer(){
-        return "eles comem";
-    }
+// objeto da classe AlunoDAO foi criado para gerenciar os métodos do CRUD
 
-    public function nadar(){
-        return "eles nadam";
-    }
+$dao = new AlunoDAO();
+
+//CREATE
+
+$dao->criarAluno(new Aluno(1, "Maria", "Design"));
+$dao->criarAluno(new Aluno(2, "Gabriel", "Moda"));
+$dao->criarAluno(new Aluno(3, "Eduardo", "Manicure"));
+$dao->criarAluno(new Aluno(4, "Aurora", "Arquitetura"));
+$dao->criarAluno(new Aluno(5, "Oliver", "Diretor"));
+$dao->criarAluno(new Aluno(6, "Amanda", "Lutadora"));
+$dao->criarAluno(new Aluno(7, "Geysa", "Engenheira"));
+$dao->criarAluno(new Aluno(8, "Joab", "Professor"));
+$dao->criarAluno(new Aluno(9, "Bernardo", "Streamer"));
+
+//READ
+
+echo "Listagem Inicial\n";
+foreach($dao->lerAluno() as $aluno){
+    echo"{$aluno->getId()} - {$aluno->getNome()} - {$aluno->getCurso()} \n";
 }
 
-// classe turista se relaciona com paises
-// turistas visitam paises
+//UPDATE
 
-// classe turista se relaciona com Aguas
-// turista nadão em rios e praias
+$dao->atualizarAluno(3, "Viviane", "Eletricista");
+$dao->atualizarAluno(7, "Clotilde", "Engenharia");
+$dao->atualizarAluno(8, "Joana", "Professora");
+$dao->atualizarAluno(9, "Bernardo", "Dev");
+$dao->atualizarAluno(6, "Amanda", "Logistica");
+$dao->atualizarAluno(5, "Oliver", "Eletrica");
 
-//clase turista se relaciona com Alimentos
-//turistas comem comidas
 
-class Lugares{
-    public $nome;
+echo "Após atualização:\n";
 
-    public function __construct($nome){
-        $this->nome=$nome;
-    }
+foreach($dao->lerAluno() as $aluno){
+    echo"{$aluno->getId()} - {$aluno->getNome()} - {$aluno->getCurso()} \n";
 }
 
-//classe paises se relaciona com Aguas
-//paises tem rios e praias
+// DELETE
 
-//classe paises se relaciona com Alimentos
-//paises tem comida
+$dao->excluirAluno(2);
+$dao->excluirAluno(7);
+$dao->excluirAluno(4);
 
-class Aguas{
-    public $nome;
-
-    public function __construct($nome){
-        $this->nome=$nome;
-    }
+echo "Após a exclusão:\n";
+foreach($dao->lerAluno() as $aluno){
+    echo"{$aluno->getId()} - {$aluno->getNome()} - {$aluno->getCurso()} \n";
 }
-
-class Alimento{
-    public $nome;
-
-    public function __construct($nome){
-        $this->nome=$nome;
-    }
-}
-
-?> -->
