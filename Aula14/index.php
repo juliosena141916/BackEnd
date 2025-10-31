@@ -25,3 +25,9 @@ $produtosDAO->criarProduto($Guarana_jesus);
 $produtosDAO->criarProduto($Bolacha_bono);
 $produtosDAO->criarProduto($Desinfetante_urca);
 $produtosDAO->criarProduto($Prestobarba_bic);
+
+$produtosDAO->atualizarProduto(7, "Desinfetante Barbarex", 6.00);
+$produtosDAO->atualizarProduto(4, "Iogurte Grego", 5.00);
+
+$produtosDAO->excluirProduto(1);
+$produtosDAO->excluirProduto(2);

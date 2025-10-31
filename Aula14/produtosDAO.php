@@ -32,9 +32,9 @@ private function SalvaremArquivo(){
 
     foreach ($this->produtos as $codigo => $produtos){
         $dados[$codigo]=[
-            'código' => $produtos->getId(),
+            'código' => $produtos->getCodigo(),
             'nome' => $produtos->getNome(),
-            'preço' => $produtos->getCurso()
+            'preço' => $produtos->getPreco()
         ];
     }
 
@@ -42,7 +42,7 @@ private function SalvaremArquivo(){
 }
 
 public function criarProduto(Produtos $produtos){
-    $this->produtos[$produtos->getId()]= $produtos;
+    $this->produtos[$produtos->getCodigo()]= $produtos;
     $this->SalvaremArquivo();
 }
 
@@ -53,7 +53,7 @@ public function lerProduto(){
 public function atualizarProduto($codigo, $novoNome, $novoPreco){
     if (isset($this->produtos[$codigo])){
         $this->produtos[$codigo]->setNome(nome: $novoNome);
-        $this->produtos[$codigo]->setPreco(Preço: $novoPreco);
+        $this->produtos[$codigo]->setPreco(preco: $novoPreco);
     }
     $this->SalvaremArquivo();
 }

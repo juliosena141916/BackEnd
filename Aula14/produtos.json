@@ -1,0 +1,32 @@
+{
+    "3": {
+        "c\u00f3digo": 3,
+        "nome": "Queijo Brie",
+        "pre\u00e7o": 15
+    },
+    "4": {
+        "c\u00f3digo": 4,
+        "nome": "Iogurte Grego",
+        "pre\u00e7o": 5
+    },
+    "5": {
+        "c\u00f3digo": 5,
+        "nome": "Guaran\u00e1 Jesus",
+        "pre\u00e7o": 3.5
+    },
+    "6": {
+        "c\u00f3digo": 6,
+        "nome": "Bolacha Bono",
+        "pre\u00e7o": 2
+    },
+    "7": {
+        "c\u00f3digo": 7,
+        "nome": "Desinfetante Barbarex",
+        "pre\u00e7o": 6
+    },
+    "8": {
+        "c\u00f3digo": 8,
+        "nome": "Prestobarba Bic",
+        "pre\u00e7o": 8
+    }
+}
