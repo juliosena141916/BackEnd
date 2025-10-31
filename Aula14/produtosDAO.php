@@ -1,6 +1,7 @@
 <?php
 
 namespace Aula14;
+require_once "produto.php";
 
 class produtosDAO{
 
@@ -40,16 +41,16 @@ private function SalvaremArquivo(){
     file_put_contents($this->arquivo, json_encode($dados, JSON_PRETTY_PRINT));
 }
 
-public function criarAluno(Produtos $produtos){
-    $this->alunos[$produtos->getId()]= $produtos;
+public function criarProduto(Produtos $produtos){
+    $this->produtos[$produtos->getId()]= $produtos;
     $this->SalvaremArquivo();
 }
 
-public function lerAluno(){
+public function lerProduto(){
     return $this->produtos;
 }
 
-public function atualizarAluno($codigo, $novoNome, $novoPreco){
+public function atualizarProduto($codigo, $novoNome, $novoPreco){
     if (isset($this->produtos[$codigo])){
         $this->produtos[$codigo]->setNome(nome: $novoNome);
         $this->produtos[$codigo]->setPreco(Preço: $novoPreco);
@@ -57,7 +58,7 @@ public function atualizarAluno($codigo, $novoNome, $novoPreco){
     $this->SalvaremArquivo();
 }
 
-public function excluirAluno($codigo){
+public function excluirProduto($codigo){
     unset($this->produtos[$codigo]);
     $this->SalvaremArquivo();
 }
