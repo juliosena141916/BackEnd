@@ -1,6 +1,6 @@
 <?php
 
-namespace Aula15;
+
 
 class Bebidas{
 

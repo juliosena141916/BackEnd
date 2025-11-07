@@ -1,11 +1,9 @@
 <?php
 
-namespace Aula15;
-
 require_once __DIR__ . "/../Model/bebidasDAO.php";
 require_once __DIR__ . "/../Model/bebidas.php";
 
-class BebidaController {
+class BebidaController{
     private $dao;
 
     // Construtor: cria o objeto DAO (responsável por salvar/carregar)

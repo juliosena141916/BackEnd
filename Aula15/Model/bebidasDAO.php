@@ -1,6 +1,6 @@
 <?php
 
-namespace Aula15;
+
 require_once "bebidas.php";
 
 class BebidasDAO{
@@ -19,7 +19,7 @@ class BebidasDAO{
             foreach($dados as $nome => $info){
                 $this->bebidas[$nome] = new Bebidas(
                     $info['nome'],
-                    $info['categoria'],
+                    $info['Categoria'],
                     $info['volume'],
                     $info['valor'],
                     $info['qtde']

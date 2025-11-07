@@ -1,16 +1,12 @@
 <?php
 
-require_once __DIR__ . "/../Model/bebidas.php";
-require_once __DIR__ . "/../Model/bebidasDAO.php";
-
-
 require_once __DIR__ . '/../Controller/BebidaController.php';
 
 $controller = new BebidaController();
 
 // Ações da página
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if ($_POST['acao'] === 'salvar') {
+    if ($_POST['acao'] === 'criar') {
         $controller->criar($_POST['nome'], $_POST['categoria'], $_POST['volume'], $_POST['valor'], $_POST['qtde']);
     } elseif ($_POST['acao'] === 'deletar') {
         $controller->deletar($_POST['nome']);
@@ -52,5 +48,23 @@ $lista = $controller->ler();
     <button type="submit">Cadastrar</button>
     </form>
 
+
+    <h2>Lista de Bebidas Cadastradas</h2>
+    <table>
+    <thead>
+    <?php foreach ($lista as $bebida): ?>
+        <tbody>
+            <?php echo "Nome: " . $bebida->getNome() . " | Categoria: " . $bebida->getCategoria() . " | Volume: " . $bebida->getVolume() . " | Valor: R$ " . number_format($bebida->getValor(), 2, ',', '.') . " | Quantidade em estoque: " . $bebida->getQtde(); ?>
+            <form method="POST" style="display:inline;">
+                <input type="hidden" name="acao" value="deletar">
+                <input type="hidden" name="nome" value="<?php echo $bebida->getNome(); ?>">
+                <button type="submit">Excluir</button>
+            </form>
+        </tbody>
+    </thead>
+    </table>
+
+    
+
 </body>
-</html>
+</html><?php endforeach; ?>
