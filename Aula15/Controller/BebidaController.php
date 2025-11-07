@@ -2,8 +2,8 @@
 
 namespace Aula15;
 
-require_once bebidasDAO.php;
-require_once bebidas.php;
+require_once __DIR__ . "/../Model/bebidasDAO.php";
+require_once __DIR__ . "/../Model/bebidas.php";
 
 class BebidaController {
     private $dao;
@@ -20,9 +20,6 @@ class BebidaController {
 
     // Cadastra nova bebida
     public function criar($nome, $categoria, $volume, $valor, $qtde) {
-
-        // // Gera ID automaticamente com base no timestamp (exemplo simples)
-        // $id = time(); // Função caso o objeto tenha um atributo de ID
 
         $bebida = new Bebidas( $nome, $categoria, $volume, $valor, $qtde);
         $this->dao->criarBebida($bebida);

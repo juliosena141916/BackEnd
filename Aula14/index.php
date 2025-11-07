@@ -1,6 +1,6 @@
 <?php
 
-namespace Aula14;
+namespace Aula15;
 
 require_once "produto.php";
 require_once "produtosDAO.php";
