@@ -54,7 +54,7 @@ $lista = $controller->ler();
     <thead>
     <?php foreach ($lista as $bebida): ?>
         <tbody>
-            <?php echo "Nome: " . $bebida->getNome() . " | Categoria: " . $bebida->getCategoria() . " | Volume: " . $bebida->getVolume() . " | Valor: R$ " . number_format($bebida->getValor(), 2, ',', '.') . " | Quantidade em estoque: " . $bebida->getQtde(); ?>
+            <?php echo "Nome: " . $bebida->getNome() . " | Categoria: " . $bebida->getCategoria() . " | Volume: " . $bebida->getVolume() . " | Valor: R$ " . number_format($bebida->getValor(), 2, ',', '.') . " | Quantidade em estoque: " . $bebida->getQtde(); ?><br>
             <form method="POST" style="display:inline;">
                 <input type="hidden" name="acao" value="deletar">
                 <input type="hidden" name="nome" value="<?php echo $bebida->getNome(); ?>">

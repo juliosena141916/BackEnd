@@ -2,7 +2,7 @@
 require_once 'bebidas.php';
 require_once 'Connection.php';
 
-class BebidaDAO {
+class BebidasDAO {
     private $conn;
 
     public function __construct() {

@@ -15,9 +15,9 @@ class Connection
                 $pass = 'senaisp';
 
                 self::$instance = new PDO("mysql:host=$host;
-                charset=utf8,
+                charset=utf8",
                 $user,
-                $pass");
+                $pass);
 
                 self::$instance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 

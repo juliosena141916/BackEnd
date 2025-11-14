@@ -13,7 +13,7 @@ class BebidaController{
 
     // Lista todas as bebidas
     public function ler() {
-        return $this->dao->lerBebida();
+        return $this->dao->lerBebidas();
     }
 
     // Cadastra nova bebida
