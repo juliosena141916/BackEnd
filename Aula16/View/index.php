@@ -10,6 +10,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $controller->criar($_POST['nome'], $_POST['categoria'], $_POST['volume'], $_POST['valor'], $_POST['qtde']);
     } elseif ($_POST['acao'] === 'deletar') {
         $controller->deletar($_POST['nome']);
+    } elseif ($_POST['acao'] === 'editar') {
+        $controller->atualizar($_POST['nome'], $_POST['categoria'], $_POST['volume'], $_POST['valor'], $_POST['qtde']);
     }
 }
 
@@ -60,6 +62,17 @@ $lista = $controller->ler();
                 <input type="hidden" name="nome" value="<?php echo $bebida->getNome(); ?>">
                 <button type="submit">Excluir</button>
             </form>
+
+            <form method="POST" style="display:inline;">
+                    <input type="hidden" name="acao" value="editar">
+                    <input type="hidden" name="nome" value="<?php echo $bebida->getNome(); ?>">
+                    <input type="hidden" name="categoria" value="<?php echo $bebida->getCategoria(); ?>">
+                    <input type="hidden" name="volume" value="<?php echo $bebida->getVolume(); ?>">
+                    <input type="hidden" name="valor" value="<?php echo $bebida->getValor(); ?>">
+                    <input type="hidden" name="qtde" value="<?php echo $bebida->getQtde(); ?>">
+                    <button type="submit">Editar</button>
+                </form>
+
         </tbody>
     </thead>
     </table>
