@@ -1,0 +1,251 @@
+/* Importação de fonte, se desejar */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --cor-principal: #3498db; /* Azul primário */
+    --cor-secundaria: #2980b9; /* Azul secundário (hover) */
+    --cor-fundo: #f4f4f9;
+    --cor-texto: #333;
+    --cor-sucesso: #2ecc71;
+    --cor-erro: #e74c3c;
+    --cor-borda-clara: #ddd;
+}
+
+/* Reset básico e tipografia */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+header {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+h1, h2 {
+    color: var(--cor-principal);
+    margin-bottom: 10px;
+}
+
+/* --- Estilo de Formulários --- */
+
+.form-cadastro {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Espaço entre os campos do formulário */
+    align-items: center;
+    padding: 15px;
+    border: 1px solid var(--cor-borda-clara);
+    border-radius: 4px;
+    background: #ecf0f1;
+}
+
+.form-cadastro input[type="text"],
+.form-cadastro input[type="number"],
+.form-cadastro select {
+    flex-grow: 1; /* Permite que os campos cresçam */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-width: 150px; /* Garante que não fiquem muito pequenos */
+}
+
+/* Formulário de Edição na tabela */
+.form-acao.editar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 10px 0;
+    align-items: center;
+}
+
+.form-acao.editar input,
+.form-acao.editar select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    flex-grow: 1;
+    min-width: 80px;
+}
+
+/* --- Botões Gerais --- */
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.btn-primary {
+    background-color: var(--cor-principal);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--cor-secundaria);
+}
+
+.btn-deletar {
+    background-color: var(--cor-erro);
+    color: white;
+}
+
+.btn-deletar:hover {
+    background-color: #c0392b;
+}
+
+.btn-editar-toggle {
+    background-color: #f39c12; /* Laranja/Amarelo */
+    color: white;
+}
+
+.btn-editar-toggle:hover {
+    background-color: #e67e22;
+}
+
+.btn-confirmar-edicao {
+    background-color: var(--cor-sucesso);
+    color: white;
+}
+
+.btn-cancelar-edicao {
+    background-color: #bdc3c7;
+    color: var(--cor-texto);
+}
+
+/* Formas de ação na lista */
+.form-acao {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+/* --- Estilo de Tabela --- */
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+thead th {
+    background-color: var(--cor-principal);
+    color: white;
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid var(--cor-secundaria);
+}
+
+tbody td {
+    padding: 10px 15px;
+    border: 1px solid var(--cor-borda-clara);
+    text-align: left;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Linha de edição oculta */
+.hidden {
+    display: none;
+}
+
+.linha-edicao td {
+    background-color: #eaf2f8; /* Fundo levemente diferente para a edição */
+    border: 2px solid var(--cor-secundaria);
+}
+
+.acoes-celula {
+    white-space: nowrap; /* Impede que os botões quebrem a linha */
+}
+
+/* --- Responsividade (para telas pequenas) --- */
+@media screen and (max-width: 768px) {
+    /* Esconde cabeçalhos da tabela */
+    thead {
+        display: none;
+    }
+
+    /* Transforma a tabela em lista */
+    table, tbody, tr, td {
+        display: block;
+        width: 100%;
+    }
+
+    tr {
+        margin-bottom: 15px;
+        border: 1px solid var(--cor-borda-clara);
+        border-radius: 4px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+    }
+    
+    td {
+        text-align: right;
+        padding-left: 50%; /* Espaço para o "label" */
+        position: relative;
+        border: none;
+    }
+
+    /* Adiciona o label do cabeçalho */
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+        color: var(--cor-secundaria);
+    }
+    
+    /* Para a célula de Ações */
+    .acoes-celula {
+        text-align: left;
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+    }
+    
+    .acoes-celula::before {
+        content: "Ações";
+    }
+
+    /* Ajuste no formulário de cadastro */
+    .form-cadastro {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .form-cadastro input[type="text"],
+    .form-cadastro input[type="number"],
+    .form-cadastro select,
+    .form-cadastro button {
+        width: 100%;
+        min-width: 0;
+    }
+}
